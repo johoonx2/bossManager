@@ -12,8 +12,8 @@ public class Main {
     public static void main(String[] Args){
 
         System.out.println("HelloWorld " + Args[0]);
-//        JDABuilder builder = new JDABuilder((AccountType.BOT));
-//        builder.setToken(Args[0]);
+        JDABuilder builder = new JDABuilder((AccountType.BOT));
+        builder.setToken(Args[0]);
 //        builder.setAutoReconnect(true);
 //        builder.setStatus(OnlineStatus.ONLINE);
 //        JDA jda =  builder.buildBlocking();
