@@ -9,14 +9,14 @@ import net.dv8tion.jda.core.exceptions.RateLimitedException;
 import javax.security.auth.login.LoginException;
 
 public class Main {
-    public static void main(String[] Args){
+    public static void main(String[] Args) throws LoginException, InterruptedException {
 
 //        System.out.println("HelloWorld " + Args[0]);
         JDABuilder builder = new JDABuilder(AccountType.BOT);
-//        builder.setToken(Args[0]);
-//        builder.setAutoReconnect(true);
-//        builder.setStatus(OnlineStatus.ONLINE);
-//        JDA jda =  builder.buildBlocking();
+        builder.setToken(Args[0]);
+        builder.setAutoReconnect(true);
+        builder.setStatus(OnlineStatus.ONLINE);
+        JDA jda =  builder.buildBlocking();
 
     }
 }
