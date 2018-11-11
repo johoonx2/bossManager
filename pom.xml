@@ -17,6 +17,15 @@
     </dependencies>
 
     <build>
+        
+        <!--resource folder-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -26,25 +35,16 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-        </plugins>
-
-        <!--resource folder-->
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-        <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>com.discord.bot.mainController</mainClass>
+                    <mainClass>com.bot.discord.controller.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
 
 </project>
