@@ -14,12 +14,13 @@
             <!--<artifactId>JDA</artifactId>-->
             <!--<version>3.8.0_423</version>-->
         <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>net.dv8tion</groupId>-->
-            <!--<artifactId>JDA</artifactId>-->
-            <!--<version>3.8.1_439</version>-->
-            <!--<type>pom</type>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>3.8.0_423</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/JDA-3.8.0_423-withDependencies.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
