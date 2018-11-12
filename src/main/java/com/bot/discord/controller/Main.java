@@ -14,7 +14,7 @@ public class Main {
 
     public static JDABuilder builder;
 
-    public static void main(String[] Args) throws LoginException, InterruptedException {
+    public static void main(String[] Args){
 
 //        System.out.println("HelloWorld " + Args[0]);
         builder = new JDABuilder(AccountType.BOT);
@@ -24,8 +24,15 @@ public class Main {
 
         addListners();
 
-        JDA jda =  builder.buildBlocking();
-
+        try {
+            JDA jda = builder.buildBlocking();
+        }catch (LoginException e){
+            e.printStackTrace();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+//        }catch (RateLimitedException e){
+//            e.printStackTrace();
+        }
     }
 
     public static void addListners(){
