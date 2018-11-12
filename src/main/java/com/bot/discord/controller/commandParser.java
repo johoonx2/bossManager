@@ -1,4 +1,4 @@
-package com.bot.discord.commands;
+package com.bot.discord.controller;
 
 import com.bot.discord.util.STATIC;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
