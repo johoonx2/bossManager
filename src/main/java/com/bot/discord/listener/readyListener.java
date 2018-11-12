@@ -8,10 +8,16 @@ public class readyListener extends ListenerAdapter{
     public void onReady(ReadyEvent event){
         String out = "\nThis bot is running on following servers: \n";
 
-        for(Guild guild :event.getJDA().getGuilds()){
+        for(Guild guild : event.getJDA().getGuilds()){
             out+= guild.getName() + " (" + guild.getId() + ") \n";
         }
 
         System.out.print(out);
+
+        for(Guild guild : event.getJDA().getGuilds()){
+            guild.getTextChannels().get(0).sendMessage(
+                    "Hi !"
+            ).queue();
+        }
     }
 }
