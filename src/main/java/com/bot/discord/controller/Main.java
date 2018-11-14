@@ -1,5 +1,6 @@
 package com.bot.discord.controller;
 
+import com.bot.discord.commands.cmdPing;
 import com.bot.discord.listener.commandListener;
 import com.bot.discord.listener.readyListener;
 import com.bot.discord.listener.voiceListener;
@@ -24,6 +25,7 @@ public class Main {
         builder.setStatus(OnlineStatus.ONLINE);
 
         addListners();
+        addCommands();
 
         try {
             JDA jda = builder.buildBlocking();
@@ -34,6 +36,10 @@ public class Main {
 //        }catch (RateLimitedException e){
 //            e.printStackTrace();
         }
+    }
+
+    public static void addCommands(){
+        commandHandler.commands.put("ping", new cmdPing());
     }
 
     public static void addListners(){
