@@ -4,10 +4,12 @@ import com.bot.discord.commands.cmdPing;
 import com.bot.discord.listener.commandListener;
 import com.bot.discord.listener.readyListener;
 import com.bot.discord.listener.voiceListener;
+import com.bot.discord.util.STATIC;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
+import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 
 import javax.security.auth.login.LoginException;
@@ -23,6 +25,23 @@ public class Main {
         builder.setToken(Args[0]);
         builder.setAutoReconnect(true);
         builder.setStatus(OnlineStatus.ONLINE);
+
+//        builder.setGame(new Game() {
+//            @Override
+//            public String getName() {
+//                return "v." + STATIC.VERSION;
+//            }
+//
+//            @Override
+//            public String getUrl() {
+//                return null;
+//            }
+//
+//            @Override
+//            public GameType getType() {
+//                return null;
+//            }
+//        });
 
         addListners();
         addCommands();
