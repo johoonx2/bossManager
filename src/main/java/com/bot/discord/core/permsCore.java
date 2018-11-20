@@ -12,6 +12,7 @@ public class permsCore {
 
         System.out.println("[INFO] check func Called.");
         for( Role r : event.getGuild().getMember(event.getAuthor()).getRoles()){
+            System.out.println("[INFO] Role Check : " + r.getName());
             if(Arrays.stream(STATIC.PERMS).parallel().anyMatch(r.getName() :: contains)){
                 System.out.println("[INFO] Permission Allowed. (check)");
                 return false;
@@ -21,6 +22,7 @@ public class permsCore {
             }
         }
 
+        System.out.println("[INFO] check func Executed.");
         return true;
     }
 
